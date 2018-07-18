@@ -1,0 +1,17 @@
+spring:
+  profiles: feign1_1
+server:
+  #服务注册中心端口号
+  port: 12001
+---
+spring:
+  profiles: feign1_2
+server:
+  #服务注册中心端口号
+  port: 12002
+---
+spring:
+  profiles: feign1_3
+server:
+  #服务注册中心端口号
+  port: 12003
