@@ -8,18 +8,26 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * 返回一些信息
+ *
+ * @author yusij
+ */
 @RestController
-@RequestMapping("/test")
-public class TestController {
-    private static final Logger logger = LoggerFactory.getLogger(TestController.class);
+@RequestMapping("/info")
+public class InfoController {
+    private static final Logger logger = LoggerFactory.getLogger(InfoController.class);
 
     private final String profile;
 
     @Autowired
-    public TestController(@Value("${spring.profiles}") String profile) {
+    public InfoController(@Value("${spring.profiles}") String profile) {
         this.profile = profile;
     }
 
+    /**
+     * @return 当前profile
+     */
     @GetMapping("getProfile")
     public String getProfile() {
         logger.debug("服务接口getProfile被调用");
