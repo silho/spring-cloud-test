@@ -17,4 +17,4 @@ eureka:
 zuul:
   ignored-services: "*"
   routes:
-    spring-cloud-feign: /test/**
+    spring-cloud-feign1: /1/**
