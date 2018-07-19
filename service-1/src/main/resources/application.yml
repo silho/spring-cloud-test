@@ -1,17 +1,14 @@
 spring:
   profiles: service1_1
 server:
-  #服务注册中心端口号
   port: 11001
 ---
 spring:
   profiles: service1_2
 server:
-  #服务注册中心端口号
   port: 11002
 ---
 spring:
   profiles: service1_3
 server:
-  #服务注册中心端口号
   port: 11003
