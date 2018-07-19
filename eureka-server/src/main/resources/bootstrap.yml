@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: spring-cloud-eureka-server
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 15
+
+logging:
+  level:
+    root: info
+    com.github.silho: debug
