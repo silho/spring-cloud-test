@@ -1,6 +1,8 @@
 spring:
   application:
     name: spring-cloud-service1
+  jmx:
+    enabled: false
 
 eureka:
   instance:
