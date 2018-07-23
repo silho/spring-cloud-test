@@ -27,3 +27,12 @@ logging:
   level:
     root: info
     com.github.silho: debug
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always

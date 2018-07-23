@@ -1,6 +1,6 @@
 spring:
   application:
-    name: spring-cloud-zuul
+    name: spring-boot-admin
   jmx:
     enabled: false
 
@@ -14,21 +14,16 @@ eureka:
       #服务注册中心的配置内容，指定服务注册中心的位置
       defaultZone: http://localhost:10001/eureka/,http://localhost:10002/eureka/,http://localhost:10003/eureka/
 
-zuul:
-  ignored-services: "*"
-  routes:
-    spring-cloud-feign1: /1/**
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
 
 logging:
   level:
     root: info
     com.github.silho: debug
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-  endpoint:
-    health:
-      show-details: always
