@@ -5,9 +5,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.HashMap;
 
 @RestController
 @RequestMapping("/test")
@@ -30,5 +30,10 @@ public class TestController {
         long end = System.currentTimeMillis();
         logger.debug("接口调用耗时：{}", end - start);
         return profile + ":" + profileInfo;
+    }
+
+    @PostMapping("header")
+    public Object testHeader(@RequestBody HashMap<String, Object> reqMap, @RequestHeader("X-Auth-Token") String token) {
+        return service1.testHeader(reqMap, token);
     }
 }
