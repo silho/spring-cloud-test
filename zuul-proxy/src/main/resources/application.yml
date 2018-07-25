@@ -1,3 +1,6 @@
+server:
+  port: 18000
+---
 spring:
   profiles: zuul_1
 server:

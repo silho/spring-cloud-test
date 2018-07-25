@@ -1,3 +1,6 @@
+server:
+  port: 11000
+---
 spring:
   profiles: service1_1
 server:

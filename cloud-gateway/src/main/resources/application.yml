@@ -1,3 +1,6 @@
+server:
+  port: 18000
+---
 spring:
   profiles: gateway_1
 server:

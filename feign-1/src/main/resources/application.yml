@@ -1,3 +1,6 @@
+server:
+  port: 12000
+---
 spring:
   profiles: feign1_1
 server:
