@@ -1,3 +1,5 @@
+spring:
+  profiles:
 server:
   port: 12000
 ---
