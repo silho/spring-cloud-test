@@ -25,10 +25,7 @@ public class TestController {
 
     @GetMapping("getInfo")
     public Object getInfo() {
-        long start = System.currentTimeMillis();
         String profileInfo = service1.getProfileInfo();
-        long end = System.currentTimeMillis();
-        logger.debug("接口调用耗时：{}", end - start);
         return profile + ":" + profileInfo;
     }
 
